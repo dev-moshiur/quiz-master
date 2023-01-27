@@ -88,10 +88,10 @@ export default function Admin() {
             >
               <option value="">All</option>
               <option value="HTML">HTML</option>
-              <option value="HTML">CSS</option>
-              <option value="HTML">Javascript</option>
-              <option value="HTML">React</option>
-              <option value="HTML">Express</option>
+              <option value="CSS">CSS</option>
+              <option value="Javascript">Javascript</option>
+              <option value="React">React</option>
+              <option value="Express">Express</option>
               
             </select>
             <div className="search" onClick={handleSearch}>
