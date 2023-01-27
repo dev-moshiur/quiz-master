@@ -8,26 +8,28 @@ import { Clear } from "@material-ui/icons";
 
 export default function CreateQuize() {
   const { data, dispatch } = useData();
-  const [stutus, setstutus] = useState("wrong");
-  const [showCreatedQuestion, setshowCreatedQuestion] = useState(false);
+   const [showCreatedQuestion, setshowCreatedQuestion] = useState(false);
   const [loading, setLoading] = useState(false);
   const [createAnotherQuesion, setcreateAnotherQuesion] = useState(false);
   const [createQuestions, setcreateQuestions] = useState([]);
   const [catagory, setcatagory] = useState("javascript");
   const question = useRef();
   const option = useRef();
+  
   const server = `https://quiz-app-api-nine.vercel.app`;
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
     if (question.current.value) {
       dispatch({
         type: "addOption",
         value: {
-          option: option.current.value,
-          stutus: stutus,
+          option: e.target.option.value,
+          stutus: e.target.status.value,
         },
       });
     } else {
     }
+    e.target.reset()
   };
 
   const sendServer = () => {
@@ -98,23 +100,23 @@ export default function CreateQuize() {
         </div>
 
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            submitHandler();
-          }}
+          onSubmit={submitHandler}
         >
           <label htmlFor="option">Add Option</label>
-          <input ref={option} type="text" name="option" id="option" />
+          <input ref={option}  type="text" name="option" id="option" />
           <label htmlFor="stutus">Stutus</label>
-          <select
-            name="stutus"
-            id="stutus"
-            onChange={(e) => setstutus(e.target.value)}
-          >
-            <option value=""></option>
-            <option value="correct">Correct</option>
-            <option value="wrong">Wrong</option>
-          </select>
+          
+        <div className='status'>
+          <div>
+            <input type='radio' name='status' value='correct'/>
+            <span>Correct</span>
+            
+          </div>
+          <div>
+            <input type='radio' name='status' checked  value='wrong'/>
+            <span>Wrong</span>
+          </div>
+        </div>
           <input type="submit" value="Add" />
         </form>
         {loading && <Loading message="Saving.." loading={loading} />}
