@@ -1,0 +1,80 @@
+.admin {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: #f2f3f4;
+  padding-top: 80px;
+  padding-bottom: 70px;
+  .wrapper {
+    width: 92%;
+    margin: 0 auto;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    .top {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      input{
+        flex: 1;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid var(--black);
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 0.36rem 0.3rem;
+      }
+      select{
+        background: orangered;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 0.36rem 0.4rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+      .search{
+        background: orangered;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 0.5rem 0.7rem;
+        cursor: pointer;
+
+      }
+    }
+    .bottom {
+      width: 100%;
+      height: calc(100% - 50px);
+      overflow-y: scroll;
+      display: grid;
+      column-gap: 2rem;
+      row-gap: 2rem;
+      padding: 2.4%;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      
+    }
+  }
+  .loading{
+    position: fixed;
+    top: calc(50% - 70px);
+    left: calc(50% - 70px);
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2rem rgba($color: #000000, $alpha: 0.2);
+    img{
+      width: 100%;
+      
+    }
+    
+
+  }
+  
+}

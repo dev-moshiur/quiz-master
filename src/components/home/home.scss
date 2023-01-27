@@ -1,0 +1,51 @@
+.home {
+  width: 90%;
+  max-width: 600px;
+  height: fit-content;
+  margin: auto auto;
+  height: calc(100% - 140px);
+  padding-top: 70px;
+
+  .heading {
+    color: var(--black);
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+  }
+  .catagooryContainer {
+    margin-top: 0.7rem;
+    display: grid;
+    column-gap: 1.8rem;
+    row-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    & > * {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.4rem 0rem;
+      color: white;
+      font-size: 1.7rem;
+      font-weight: 500;
+      transition: 0.2s;
+      &:hover {
+        box-shadow: 0px 0px 2rem rgba($color: #000000, $alpha: 0.4);
+        transform: scale(1.03);
+      }
+      &:nth-child(1) {
+        background-color: rgb(6, 129, 129);
+      }
+      &:nth-child(2) {
+        background-color: orangered;
+      }
+      &:nth-child(3) {
+        background-color: rgb(111, 36, 197);
+      }
+      &:nth-child(4) {
+        background-color: olive;
+      }
+      &:nth-child(5) {
+        background-color: orchid;
+      }
+    }
+  }
+}

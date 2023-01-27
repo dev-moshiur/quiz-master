@@ -1,0 +1,34 @@
+.ExecutedQuiz {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.9rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
+  .question {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  ol {
+    list-style-position: inside;
+    li {
+      color: var(--black);
+      font-size: 1.6rem;
+      font-weight: 500;
+      background: #f2f3f4;
+      border-radius: 0.4rem;
+      margin: 0.8rem 0;
+      padding: 0.5rem 1rem;
+      &.green {
+        background: var(--green);
+      }
+      &.light {
+        background: lightgreen;
+      }
+      &.orange {
+        background: orange;
+      }
+    }
+  }
+}

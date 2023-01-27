@@ -1,0 +1,22 @@
+.loading {
+  width: 100%;
+  height: 12rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .message {
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .loadingImg {
+    width: 12rem;
+    height: 12rem;
+    img {
+      width: 12rem;
+      height: 12rem;
+    }
+  }
+}
