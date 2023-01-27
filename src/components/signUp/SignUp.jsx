@@ -2,7 +2,7 @@ import "./signUp.scss";
 // import {  useHistory } from "react-router-dom";
 import React from "react";
 import { useRef, useState } from "react";
-import { Facebook, LinkedIn } from "@material-ui/icons";
+import { Facebook, LinkedIn,Clear } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import loadinImg from "../adminDashboard/Loading_icon.gif";
 
