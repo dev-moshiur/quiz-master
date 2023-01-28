@@ -2,10 +2,11 @@ import React from "react";
 import { useEffect, useState, useRef } from "react";
 import Quiz from "../adminPageQuiz/Quiz";
 import loadinImg from "./Loading_icon.gif";
-import { Delete } from "@material-ui/icons";
+import { useData } from "../../context";
 import "./admin.scss";
-import { Clear } from "@material-ui/icons";
+import { Clear, Search } from "@material-ui/icons";
 export default function Admin() {
+  const {dispatch} = useData();
   const [loading, setloading] = useState(true);
   const [allData, setAllData] = useState([]);
   const [deleted, setDeleted] = useState(false);
@@ -14,22 +15,10 @@ export default function Admin() {
   const searchQuery = useRef();
   const [searchCatagory, setSearchCatagory] = useState("");
 
-  const handleDelete = (id) => {
-    setDeleted(false);
-    setloading(true);
-    fetch(`${server}/quize/${id}`, {
-      method: "delete",
-    }).then((respo) => {
-      if (respo.status == 200) {
-        setDeleted(true);
-        setloading(false)
-        
-      } else {
-        
-      }
-    });
-  };
-
+  const catagoryChange = (e) =>{
+    setSearchCatagory(e.target.value);
+    
+  }
   const handleSearch = () => {
     if (searchCatagory) {
       const searchCatagoryData = allData.filter((item) => 
@@ -51,6 +40,10 @@ export default function Admin() {
     }
   };
   useEffect(() => {
+    dispatch({
+      type:'setActivePage',
+      value:'admin'
+    })
     fetch(`${server}/quize`)
       .then((res) => res.json())
       .then((resp) => {
@@ -83,7 +76,8 @@ export default function Admin() {
               name="catagory"
               id="catagory"
               onChange={(e) => {
-                setSearchCatagory(e.target.value);
+                catagoryChange(e)
+                
               }}
             >
               <option value="">All</option>
@@ -95,7 +89,8 @@ export default function Admin() {
               
             </select>
             <div className="search" onClick={handleSearch}>
-              Search
+              <Search/>
+              
             </div>
           </div>
           <div className="bottom">

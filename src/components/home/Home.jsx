@@ -1,9 +1,16 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./home.scss";
 import { Link } from "react-router-dom";
 import { useData } from "../../context";
 export default function Home() {
   const { data, dispatch } = useData();
+  useEffect(() => {
+    dispatch({
+      type:'setActivePage',
+      value:'home'
+    })
+  }, [])
+  
   return (
     <div className="home">
       <div className="heading">Lets jump into a quiz tests!</div>

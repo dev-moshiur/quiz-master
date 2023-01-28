@@ -43,7 +43,14 @@
         font-weight: 500;
         padding: 0.5rem 0.7rem;
         cursor: pointer;
-
+        margin-left: 0.2rem;
+        border-radius: 0.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &>*{
+          font-size: 2.6rem;
+        }
       }
     }
     .bottom {

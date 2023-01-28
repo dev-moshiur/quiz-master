@@ -2,16 +2,17 @@ import "./login.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, LinkedIn } from "@material-ui/icons";
-import { useRef, useState } from "react";
+import { useRef, useState,useEffect } from "react";
 import {useData} from '../../context'
 import { Clear } from "@material-ui/icons";
 import loadinImg from "../adminDashboard/Loading_icon.gif";
+// import { Navigate } from "react-router-dom";
 
 export default function LogIn({}) {
   const {dispatch} = useData();
   const [error, setError] = useState();
   const [loading, setLoading] = useState();
-  const [deleted, setDeleted] = useState(false);
+  const [loged, setloged] = useState(false);
     const [message, setMessage] = useState('')
   const [showMasege, setShowMasege] = useState(false)
   const server = `https://quiz-app-api-nine.vercel.app`;
@@ -20,6 +21,13 @@ export default function LogIn({}) {
 
   const email = useRef();
   const password = useRef();
+  useEffect(() => {
+    dispatch({
+      type:'setActivePage',
+      value:'login'
+    })
+  }, [])
+  
 
   async function handleSubmit() {
     try {
@@ -43,7 +51,9 @@ export default function LogIn({}) {
           });
           setMessage('Login Successfull.You are now an Admin')
           setLoading(false);
-          setShowMasege(true)
+          setShowMasege(true);
+          setloged(true)
+          
           
         }
         else {
@@ -63,6 +73,7 @@ export default function LogIn({}) {
 
   return (
     <>
+    {/* {loged && <Navigate to ='/'/>} */}
     <div className="login">
       <div className="heading">LOGIN</div>
       <form

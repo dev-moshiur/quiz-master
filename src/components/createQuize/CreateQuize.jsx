@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState ,useEffect} from "react";
 
 import React from "react";
 import "./createQuize.scss";
@@ -17,6 +17,12 @@ export default function CreateQuize() {
   const option = useRef();
   
   const server = `https://quiz-app-api-nine.vercel.app`;
+  useEffect(() => {dispatch({
+    type:'setActivePage',
+    value:'create'
+  })
+  }, [])
+  
   const submitHandler = (e) => {
     e.preventDefault();
     if (question.current.value) {

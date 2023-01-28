@@ -1,13 +1,15 @@
 import "./signUp.scss";
 // import {  useHistory } from "react-router-dom";
 import React from "react";
-import { useRef, useState } from "react";
+import { useRef, useState,useEffect } from "react";
 import { Facebook, LinkedIn,Clear } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import loadinImg from "../adminDashboard/Loading_icon.gif";
+import { useData } from "../../context";
 
 
 export default function SignUn() {
+  const {dispatch} =useData();
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
   const [showMasege, setShowMasege] = useState(false)
@@ -19,6 +21,13 @@ export default function SignUn() {
   const confirmPassword = useRef();
   const server = `https://quiz-app-api-nine.vercel.app`;
   // const history = useHistory();
+  useEffect(() => {
+    dispatch({
+      type:'setActivePage',
+      value:'signUp'
+    })
+  }, [])
+  
 
   async function handleSubmit() {
     // do validation

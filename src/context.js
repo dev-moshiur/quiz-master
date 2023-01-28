@@ -15,6 +15,7 @@ export default function Context({ children }) {
     options: [],
     admin:false,
     quizTestCatagory: "",
+    activePage:'home',
   };
 
   const reducer = (state, action) => {
@@ -48,6 +49,11 @@ export default function Context({ children }) {
         return {
           ...state,
           quizTestCatagory: action.value,
+        };
+      case "setActivePage":
+        return {
+          ...state,
+          activePage: action.value,
         };
       case "choiceAnswer":
         let question = state.examQuestion[action.value.questionNo];
