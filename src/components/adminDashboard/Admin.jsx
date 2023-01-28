@@ -94,6 +94,7 @@ export default function Admin() {
             </div>
           </div>
           <div className="bottom">
+            {data.length == 0 && <div>There is no Item In this catagory</div>}
             {data.map((item) => (
               <Quiz item={item}/>
               
