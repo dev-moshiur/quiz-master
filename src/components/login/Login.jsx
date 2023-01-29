@@ -95,10 +95,7 @@ export default function LogIn({}) {
         <input ref={email} type="email" name="email" id="email" />
         <label htmlFor="passwoed">Password</label>
         <input ref={password} type="password" name="password" id="password" />
-        <div className="cheak">
-          <input type="checkbox" name="checkbox" id="checkbox" />{" "}
-          <span>Remind Me</span>
-        </div>
+        
         <input
           disabled={loading}
           className="submit"
@@ -106,22 +103,10 @@ export default function LogIn({}) {
           value="LOGIN"
         />
       </form>
-      <div className="forgot">Forgot Password?</div>
-      <div className="or">
-        <span>OR</span>
-      </div>
-      <div className="googleAndFacebook">
-        <span>
-          <Facebook />
-        </span>
-        <span>
-          <LinkedIn />
-        </span>
-      </div>
-      <div className="signLog">
+      {/* <div className="signLog">
         Need A Account
         <Link to="/signUp">Sign Up</Link>
-      </div>
+      </div> */}
     </div>
     {showMasege && <div className="dalateMassege">
         <span>

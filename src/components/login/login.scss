@@ -1,21 +1,23 @@
 .login {
   background: white;
-  padding: 2.2rem;
+  padding:  2.2rem;
   color: var(--black);
   border-radius: 0.5rem;
   width: 94%;
   max-width: 450px;
   box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
-  margin: 50px auto;
+  margin: auto auto;
   height: fit-content;
   display: flex;
   flex-direction: column;
   
-  padding-top: 70px;
+  
   .heading {
     font-weight: 700;
     font-size: 1.4rem;
     margin-bottom: 0.3rem;
+    width: fit-content;
+    margin: 0 auto;
   }
   form {
     display: flex;

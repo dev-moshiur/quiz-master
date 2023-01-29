@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Quize from "../quize/Quize";
 import { useData } from "../../context";
+import loadinImg from "../adminDashboard/Loading_icon.gif";
 import {
   KeyboardArrowLeft,
   KeyboardArrowRight,
@@ -14,6 +15,7 @@ export default function Perticipent() {
   const [questionIndex, setquestionIndex] = useState(0);
   const [time, setTime] = useState(150);
   const [completeExam, setcompleteExam] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const [writeAnswer, setwriteAnswer] = useState(0);
   const server = `https://quiz-app-api-nine.vercel.app`;
@@ -51,15 +53,22 @@ export default function Perticipent() {
     });
   };
   useEffect(() => {
+    setLoading(true)
     fetch(`${server}/quize/?catagory=${data.quizTestCatagory}`)
       .then((res) => res.json())
       .then((data) => {
         procesData(data);
+        setLoading(false)
       });
   }, []);
 
   return (
     <>
+    {loading && (
+        <div className="loading">
+          <img src={loadinImg} alt="" />
+        </div>
+      )}
       {!completeExam && (
         <div className="pertcipate">
           <div className="index">
