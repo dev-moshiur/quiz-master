@@ -6,7 +6,7 @@ export default function Loading({ message, loading }) {
     <div className="loading">
       {loading && (
         <>
-          <div className="message">{message}</div>
+          
           <div className="loadingImg">
             <img src={loadingImg} alt="" />
           </div>
