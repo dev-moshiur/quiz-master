@@ -108,9 +108,9 @@ export default function CreateQuize() {
         <form
           onSubmit={submitHandler}
         >
-          <label htmlFor="option">Add Option</label>
+          <label htmlFor="option">Add an option</label>
           <input ref={option}  type="text" name="option" id="option" />
-          <label htmlFor="stutus">Stutus</label>
+          <label htmlFor="stutus">Option status</label>
           
         <div className='status'>
           <div>
