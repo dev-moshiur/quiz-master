@@ -162,30 +162,56 @@
   
 
 }
-.dalateMassege{
+.dalateMassegeLogin{
   position: fixed;
-  top: calc(50% - 20px);
+  top: calc(50% - 10px);
   left: calc(50% - 170px);
   width: 340px;
-  height: 40px;
+  height: fit-content;
   display: flex;
-  padding: 0.3rem;
+  padding: 0.7rem;
   justify-content: center;
   align-items: center;
   column-gap: 1.5rem;
   border-radius: 0.5rem;
-  background-color: orangered;
-  color: #fff;
-  box-shadow: 0 0 2rem rgba($color: #000000, $alpha: 0.2);
+  background-color:#fff;
+  color: var(--black);
+  box-shadow: 0 0 13rem rgba($color: #000000, $alpha: 1);
   .claer{
     cursor: pointer;
     font-size: 1.7rem;
     font-weight: 600;
   }
-  span{
-    color: white;
-    font-size: 1.6rem;
+  .left{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    .message{
+      font-size: 1.6rem;
     font-weight: 600;
-  }
 
+    }
+    .guide{
+      color: var(--black);
+      font-size: 1.3rem;
+    }
+    .links{
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.9rem;
+      &>*{
+        text-decoration: none;
+        color: var(--black);
+        background-color: var(--green);
+        width: fit-content;
+        color: #fff;
+        font-size: 1.3rem;
+        padding: 0.4rem 0.9rem;
+        border-radius: 0.2rem;
+      }
+    }
+
+
+  }
+  
 }

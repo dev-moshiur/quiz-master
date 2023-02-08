@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import React from 'react'
-import loadinImg from "../adminDashboard/Loading_icon.gif";
+import loadinImg from "../../images/Loading_icon.gif";
 import { Clear } from "@material-ui/icons";
 import { Delete } from "@material-ui/icons";
 

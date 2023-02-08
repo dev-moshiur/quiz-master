@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
-import Quiz from "../adminPageQuiz/Quiz";
-import loadinImg from "./Loading_icon.gif";
+import Quiz from "../../components/adminPageQuiz/Quiz";
+import loadinImg from "../../images/Loading_icon.gif";
 import { useData } from "../../context";
 import "./admin.scss";
 import { Clear, Search } from "@material-ui/icons";

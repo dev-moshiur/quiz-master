@@ -1,15 +1,15 @@
 import Context from "./context";
 import { Routes, Route } from "react-router-dom";
-import CreateQuize from "./components/createQuize/CreateQuize";
+import CreateQuize from "./pages/createQuize/CreateQuize";
 import Topbar from "./components/topbar/Topbar";
-import Home from "./components/home/Home";
-import Login from "./components/login/Login";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
 import SignUp from "./components/signUp/SignUp";
 import "./app.scss";
 import PrivateOutlet from "./components/privateOutlet/PrivateOutlet";
 
-import Perticipent from "./components/perticipent/Perticipent";
-import Admin from "./components/adminDashboard/Admin";
+import Perticipent from "./pages/perticipent/Perticipent";
+import Admin from "./pages/adminDashboard/Admin";
 function App() {
   return (
     <div className="App">

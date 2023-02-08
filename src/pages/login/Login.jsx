@@ -5,7 +5,7 @@ import { Facebook, LinkedIn } from "@material-ui/icons";
 import { useRef, useState,useEffect } from "react";
 import {useData} from '../../context'
 import { Clear } from "@material-ui/icons";
-import loadinImg from "../adminDashboard/Loading_icon.gif";
+import loadinImg from "../../images/Loading_icon.gif";
 // import { Navigate } from "react-router-dom";
 
 export default function LogIn({}) {
@@ -108,10 +108,21 @@ export default function LogIn({}) {
         <Link to="/signUp">Sign Up</Link>
       </div> */}
     </div>
-    {showMasege && <div className="dalateMassege">
-        <span>
+    {showMasege && <div className="dalateMassegeLogin">
+      <div className="left">
+        <div className="message">
           {message}
-        </span>
+        </div>
+        <div className="guide">
+          Now you can
+        </div>
+        <div className="links">
+          <Link to='/create'>Create Quiz</Link>
+          <Link to='/admin'>Manage Quiz</Link>
+        </div>
+
+      </div>
+        
         <Clear className='claer' onClick={()=>setShowMasege(false)}/>
         
         </div>}

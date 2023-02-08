@@ -1,4 +1,4 @@
-import "./quize.scss";
+import "./quiz.scss";
 import React from "react";
 import { useData } from "../../context";
 export default function Quize({ questionIndex, setquestionIndex }) {

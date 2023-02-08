@@ -1,9 +1,9 @@
 import "./perticipent.scss";
 import React from "react";
 import { useState, useEffect } from "react";
-import Quize from "../quize/Quize";
+import Quize from "../../components/quiz/Quiz";
 import { useData } from "../../context";
-import loadinImg from "../adminDashboard/Loading_icon.gif";
+import loadinImg from "../../images/Loading_icon.gif";
 import {
   KeyboardArrowLeft,
   KeyboardArrowRight,

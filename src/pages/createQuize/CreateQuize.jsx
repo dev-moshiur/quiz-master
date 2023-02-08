@@ -3,7 +3,7 @@ import { useRef, useState ,useEffect} from "react";
 import React from "react";
 import "./createQuize.scss";
 import { useData } from "../../context";
-import Loading from "../loading/Loading";
+import Loading from "../../components/loading/Loading";
 import { Clear } from "@material-ui/icons";
 
 export default function CreateQuize() {
