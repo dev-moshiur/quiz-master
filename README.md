@@ -1,6 +1,6 @@
 # Quiz Master - Reactjs App
 
-This project was made by [Moshiur Rahman](https://github.com/dev-moshiur) with [Next JS](https://github.com/facebook/create-next-app).
+This project was made by [Moshiur Rahman](https://github.com/dev-moshiur) with [React JS](https://github.com/facebook/create-react-app).
 
 <br>
 
@@ -28,7 +28,7 @@ website.A navbar and a footer also added. **<span> \
 ## **`Useful Links`**
 
 **1. [Github Client Side Repository](https://github.com/dev-moshiur/quiz-master)** \
-**2. [Github Server Side Repository](https://github.com/dev-moshiur/quiz-master-api)** \
+**2. [Github Server Side Repository](https://github.com/dev-moshiur/quiz-app-api)** \
 **3. [Live Website](https://quiz-master-tau.vercel.app)**
 
 <br>
